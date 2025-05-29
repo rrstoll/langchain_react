@@ -1,0 +1,7 @@
+langchain
+langchain-openai
+openai
+requests
+dotenv
+streamlit
+streamlit-chat
