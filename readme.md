@@ -13,7 +13,7 @@ Ask natural language questions like:
 
 * “What’s the latest news in Tokyo?”
 * “What’s the weather in Paris?”
-* “What is 45 \* 23?”
+* “What is 45 x 23?”
 * “Tell me about the Eiffel Tower’s history.”
 
 ---
