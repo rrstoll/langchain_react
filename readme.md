@@ -62,6 +62,7 @@ Ask natural language questions like:
    OPENAI_API_KEY=your_openai_api_key
    NEWS_API_KEY=your_newsapi_key
    LANGCHAIN_API_KEY=your_langchain_api_key
+   TAVILY_API_KEY=your_tavily_api_key
    ```
 
 5. **Run the application**:
@@ -91,7 +92,7 @@ city-info/
 ├── tools/
 │   ├── calculator_tool.py
 │   ├── news_tool.py
-│   ├── search_tool.py
+│   ├── search_tool.py  # Powered by Tavily
 │   └── weather_tool.py
 ├── app.py
 ├── requirements.txt
