@@ -50,9 +50,64 @@ tools = [search_tool, calculator_tool, weather_tool, news_tool]
 agent = create_react_agent(llm, tools, react_prompt)
 agent_executor = AgentExecutor(agent=agent, tools=tools)
 
-# Streamlit UI setup
-st.set_page_config(page_title="ReAct City Info", page_icon="🤖")
-st.title("🤖 ReAct City Info")
+st.set_page_config(page_title="City Info", page_icon="")
+st.image("assets/cityscape.png", use_container_width=False)
+
+# Custom CSS for Streamlit app
+st.markdown("""
+    <style>
+    .block-container {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    .stAppViewContainer {
+        top: 4rem;
+    }
+    .block-container + div {
+        flex-grow: 0;
+    }
+    .stApp h1 {
+        text-align: center;
+        font-size: 2.5rem;
+        color: #0a3d62;
+    }
+    .stMarkdown p {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+    .stChatMessage {
+        border-radius: 12px;
+        padding: 10px;
+        margin: 10px 0;
+    }
+    .stChatMessage.user {
+        background-color: #dff9fb;
+        color: #130f40;
+    }
+    .stChatMessage.assistant {
+        background-color: #f6e58d;
+        color: #30336b;
+    }
+    .stTextInput>div>div>input {
+        font-size: 1.1rem;
+        padding: 8px;
+        border-radius: 8px;
+    }
+    .stButton>button {
+        font-size: 1.1rem;
+        padding: 8px 20px;
+        background-color: #0a3d62;
+        color: white;
+        border-radius: 8px;
+    }
+    .stButton>button:hover {
+        background-color: #2980b9;
+        color: white;
+    }
+    </style>
+""", unsafe_allow_html=True)
+
+st.title("City Info")
 st.markdown("Ask me a question about a foreign city!")
 
 # Initialize chat history
