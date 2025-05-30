@@ -1,10 +1,13 @@
-from langchain.tools import Tool
+import os
+from dotenv import load_dotenv
+from langchain_tavily import TavilySearch
 
-def simple_search(query):
-    return f"Pretend search result for '{query}'."
+# Load environment variables (TAVILY_API_KEY)
+load_dotenv()
 
-search_tool = Tool.from_function(
-    func=simple_search,
-    name="SimpleSearch",
-    description="Search for general knowledge topics not specific to a location or city."
+# Initialize Tavily search tool
+search_tool = TavilySearch(
+    max_results=5,
+    topic="general",
+    search_depth="basic"
 )
