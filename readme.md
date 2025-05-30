@@ -1,5 +1,3 @@
----
-
 # 🌍 City Info
 
 **City Info** is an interactive AI-powered assistant that provides real-time information about cities worldwide. Built with [LangChain](https://www.langchain.com/) and [Streamlit](https://streamlit.io/), it integrates tools for:
