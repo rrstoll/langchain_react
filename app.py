@@ -6,10 +6,10 @@ from langchain_openai import ChatOpenAI
 from langchain.agents import create_react_agent, AgentExecutor
 from langchain_core.prompts import PromptTemplate
 
-from tools.search_tool import search_tool
 from tools.calculator_tool import calculator_tool
 from tools.weather_tool import weather_tool
 from tools.news_tool import news_tool
+from tools.search_tool import search_tool
 
 # Load API keys
 load_dotenv()
@@ -73,7 +73,7 @@ st.markdown("""
     }
     .stMarkdown p {
         font-size: 1.2rem;
-        text-align: center;
+        text-align: left;
     }
     .stChatMessage {
         border-radius: 12px;
